@@ -7,7 +7,7 @@
 #  /   /  \\  \\\   /   (:      "||:  __   \  /   /  \\  \(:   _(  _|(:      "||:  __   \  
 # (___/    \___)\__/     \_______)|__|  \___)(___/    \___)\_______)  \_______)|__|  \___) 
 #                                                                                          
-# Create a shell script able to inject a file with one number per line and return their average.
+# Create a shell script able to accept as an input a file with one number per line and return their average.
 # It must support an arbitrary file length.
 #
 # Bonus: in case the lines are CSV (comma-separed values) treat each column as a different file, returning the 
