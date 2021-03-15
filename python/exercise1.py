@@ -5,7 +5,7 @@
 #  \ \_\  \ \_\\"\_\    \ \_\  \ \_____\  \ \_\ \_\  \/\_____\  \ \_____\  \ \_\      \ \_\ 
 #   \/_/   \/_/ \/_/     \/_/   \/_____/   \/_/ /_/   \/_____/   \/_____/   \/_/       \/_/ 
 #
-# Create a python script that, given the following inputs:
+# Create a python script that, given the following inputs (as strings!):
 #   1. ["11, 9, 38, 16, 75, 2, 8, 23",  "9, 83, 52, 8, 24, 11, 103"]
 #   2. ["5, 78, 23, 4, 9, 0, 36, 1", "77, 33, 26, 0, 5, 19, 44"]
 #
