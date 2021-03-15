@@ -9,23 +9,21 @@
 # $$ |  $$ |$$    $$/ /     $$/ $$    $$/ $$ |$$    $$/   $$  $$/ $$       |$$ |      
 # $$/   $$/ $$$$$$$/  $$$$$$$/   $$$$$$/  $$/  $$$$$$/     $$$$/   $$$$$$$/ $$/          
 #
-# Create a script able to list files and directories contained in the same directory as the script executable.
+# Create a script which includes and runs a function defined another .py file from another folder.
+# The include path must be relative.
 # This result must be independent on the folder the script is executed from.
 #
 # To better explain let's assume the following structure:
 # 
-#   ├── README.md
-#   ├── bash
-#   │   ├── exercise1.sh
-#   │   └── exercise2.sh
-#   ├── c++
-#   │   ├── exercise1.cpp
-#   │   └── exercise2.cpp
+#   |
 #   └── python
+#       ├── lib
+#       |   └── dummy.py
 #       ├── exercise1.py
 #       └── exercise2.py
 #   
-# This script is "exercise2.py". It should list itself and "exercise1.py" (same as "ls"), no matter the workdir.
+# This script is "exercise2.py". It should execute the run function defined in ./lib/dummy.py independently of
+# the path from which it gets called.
 #
 # E.g. one should run the script as:
 #  * ./open-forbc-candidate-test/python/exercise2.py when at open-forbc-candidate-test
@@ -35,3 +33,8 @@
 # And always get the same result.
 #
 ####################################################################################################################
+
+from lib.dummy import run
+
+if __name__ == "__main__":
+  run()
