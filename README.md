@@ -1,6 +1,6 @@
-# <center>Open ForBC <br/> Candidate assessment exercises</center>
+# Open ForBC - GSoC 2021 - Candidate assessment exercises
 
-If you received this repository and its contents you have been selected to be one of te candidates accessing to the following selection phase of our project. 
+If you received this repository and its contents you have been selected to be one of the candidates accessing to the following selection phase of our project. 
 
 ### <center>That's super cool! <br/> 🤩🤩🤩 <br/><br/></center>
 
@@ -19,6 +19,8 @@ Whenever you are ready clone this repository into your GitHub account and start 
 
 We'll clone the repo as soon as we hear back from you and we'll test and understand the code you wrote and report to you all!
 
-## <center> Your solutions must be returned in the form of a clone-able link to a GitHub repository of your own. <br/><br/> Please refer to the email communication for deadline definition!</center>
+### Your solutions must be returned in the form of a clone-able link to a GitHub repository of your own.
+
+## In addition, we'd like you to answer to a few technical questions we put together [here](https://docs.google.com/forms/d/e/1FAIpQLSfzMTYUPowoAUd9V6Y2qA5qihPPKX3_wz_QgSkBUy6CwkEgGQ/viewform)
 
 # <center>That's all folks, let's code!</center>
