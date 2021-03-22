@@ -14,3 +14,14 @@
 #        averages as a single CSV line.
 # 
 ####################################################################################################################
+SUM=0
+NUM_OF_ELEMENT=0
+for data in $(cat $1);
+do
+SUM=$(($SUM+$data))
+NUM_OF_ELEMENT=$(($NUM_OF_ELEMENT+1))
+done
+echo $SUM
+echo $NUM_OF_ELEMENT
+echo "scale=2; $SUM/$NUM_OF_ELEMENT" | bc
+

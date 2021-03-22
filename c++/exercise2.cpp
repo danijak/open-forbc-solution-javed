@@ -18,3 +18,35 @@
 // another thread with respect to the one (or the ones) performing the sum.
 //
 /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// ************I have done only first part of this excercise*********************
+#include <bits/stdc++.h> 
+using namespace std;
+int main(){
+
+    int n;
+    cout<<"Enter the length of the vector";
+    cin>>n;
+    vector<int> arr1;
+    vector<int> arr2;
+    int data;
+    cout<<"Enter first vector";
+    for(int i=0;i<n;i++){
+        cin>>data;
+        arr1.push_back(data);
+    }
+    cout<<"Enter second vector";
+    for(int i=0;i<n;i++){
+        cin>>data;
+        arr2.push_back(data);
+    }
+
+vector<int> result;
+ result.reserve(arr1.size());
+transform (arr1.begin(), arr1.end(), arr2.begin(), result.begin(), plus<int>());
+cout<<"Final result:"<<endl;
+for(int i=0;i<n;i++){
+        cout<<result[i]<<endl;
+    }
+}

@@ -33,7 +33,64 @@
 //
 // Bonus: make the cache able to act on a underlying data array containing ANY data type
 //
-// Bonus 2: abstract the cache in order to accept C and std arrays and std vectors as
-//          underlying data structures
+// Bonus 2: abstract the cache in ors
 // 
 ////////////////////////////////////////////////////////////////////////////////////////
+
+#include <iostream> 
+#include <vector> 
+  
+using namespace std; 
+
+bool cache_search(vector <pair<int, char>> &cache, int key)
+{
+    for(int i=0;i<cache.size();i++){
+        if(cache[i].first==key){
+            cout<<"Key found"<<endl;
+            cout<<"Data is: "<<cache[i].second<<endl;
+            cache.insert(cache.begin(),cache[i]);
+            cache.erase(cache.begin()+i+1);
+            return true;
+        }
+    }
+    return false;
+           
+}
+
+void insert_in_cache(vector<char> data,vector <pair<int, char>> &cache, int key){
+    if(cache.size()==5){
+        cout<<"Cache full, removing last element"<<endl;
+        cache.pop_back();
+    }
+    cache.insert(cache.begin(),make_pair(key, data[key-1]));
+    cout<<"Inserted the key in cache"<<endl;
+}
+
+int main()
+{
+    int n;
+    cout<<"enter number of elements in data";
+    cin>>n;
+    vector<char> data;
+    cout<<"Enter the elements";
+    for(int i=0;i<n;i++){
+        char ch;
+        cin>>ch;
+        data.push_back(ch);
+    }
+    vector <pair<int, char>> cache;
+    int key;
+    cout<<"Enter key or 0 to exit";
+    cin>>key;
+    while(key!=0){
+    bool key_exists=cache_search(cache,key);
+    if(!key_exists){
+        insert_in_cache(data,cache,key);
+    }
+    cout<<"Enter key or 0 to exit";
+    cin>>key;
+    }
+    return 0;
+}
+
+

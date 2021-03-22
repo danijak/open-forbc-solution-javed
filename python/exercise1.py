@@ -19,3 +19,25 @@
 #     random_input = '['+'"'+', '.join(a)+'"'+', '+'"'+', '.join(b)+'"'+']'
 #
 ####################################################################################################################
+# Dependencies
+import random
+import numpy as np
+import ast
+
+a = [str(random.randint(0,100)) for i in range(0, random.randint(5, 15))]
+b = [str(random.randint(0,100)) for i in range(0, random.randint(5, 15))]
+random_input = '['+'"'+', '.join(a)+'"'+', '+'"'+', '.join(b)+'"'+']'
+
+random_input=ast.literal_eval(random_input)
+print("Input is:" +str(random_input))
+
+input_array1=[ int(n) for n in random_input[0].split(',') if n != ' ' ]
+input_array2=[ int(n) for n in random_input[1].split(',') if n != ' ' ]
+
+C = np.array([i for i in input_array1 if i in input_array2])
+  
+# Common values between two arrays 
+if (C.size!=0):
+    print("Common elements are :"+str(C))
+else:
+    print("No common elements")
